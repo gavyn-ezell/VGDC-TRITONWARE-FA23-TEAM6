@@ -18,11 +18,11 @@ public class bouncescript : MonoBehaviour
     {
         if (col.name == "l" || col.name == "r")
         {
-            rb.velocity = Vector2.Scale(rb.velocity, new Vector2(-1f, 1f));
+            rb.velocity = Vector2.Scale(rb.velocity, new Vector2(-1f, Random.Range(1f, 1.5f))).normalized * movespeed;
         }
         else
         {
-            rb.velocity = Vector2.Scale(rb.velocity, new Vector2(1f, -1f));
+            rb.velocity = Vector2.Scale(rb.velocity, new Vector2(Random.Range(1f, 1.5f), -1f)).normalized * movespeed;
         }
     }
 }
