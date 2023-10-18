@@ -695,7 +695,7 @@ MonoBehaviour:
   bullet: {fileID: 8896428092085701290, guid: b70a6534e8a164e52800cdee5aec93fd, type: 3}
   trans: {fileID: 1364947047}
   test: 1
-  coolDown: 100
+  coolDown: 10
 --- !u!212 &1524320284
 SpriteRenderer:
   m_ObjectHideFlags: 0
