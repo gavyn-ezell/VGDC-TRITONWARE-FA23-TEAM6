@@ -40,7 +40,7 @@ public class Boss : MonoBehaviour
             if (col.name == "l" || col.name == "r")
             {
                 rb.velocity = Vector2.Scale(rb.velocity, new Vector2(-1f, 1f));
-                for (int i = 0; i < 10; i++)
+                for (int i = 0; i < 8; i++)
                 {
                     Instantiate(bullet, transform.position, Quaternion.Euler(transform.rotation.eulerAngles + new Vector3(0, 0, 90) - Vector3.forward * Random.Range(40, 140)));
                 }
