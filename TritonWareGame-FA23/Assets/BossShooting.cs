@@ -28,7 +28,7 @@ public class BossShooting : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         if(Time.time > attackTime) {
-            attackTime += 1.3f;
+            attackTime += 0.3f;
             boss.shoot = true;
             // Instantiate(bullet, animator.transform.position, Quaternion.Euler(animator.transform.rotation.eulerAngles - Vector3.forward * Random.Range(85, 95)));
         }
