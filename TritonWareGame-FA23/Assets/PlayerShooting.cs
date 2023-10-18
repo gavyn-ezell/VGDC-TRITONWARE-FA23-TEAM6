@@ -10,7 +10,7 @@ public class PlayerShooting : MonoBehaviour
     public GameObject bullet;
     public Transform trans;
     public bool test;
-    public float coolDown = 5f;
+    public float coolDown = 20f;
     private float shootTimer;
     void Start()
     {
