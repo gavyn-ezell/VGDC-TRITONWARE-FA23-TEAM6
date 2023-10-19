@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     // Start is called before the first frame update
+    public GameObject health;
     public float movementSpeed = 5;
     public Rigidbody2D player;
     private Vector2 movementDirection;
@@ -45,6 +46,31 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         player.MovePosition(player.position + movementDirection.normalized * movementSpeed * Time.fixedDeltaTime);
+    }
+
+
+
+    //private void Flip()
+    //{
+    //    if(facingRight && horizontal < 0 || facingRight && horizontal > 0)
+    //    {
+    //        facingRight = !facingRight;
+    //        Vector3 localScale = transform.localScale;
+    //        localScale.x *= -1;
+    //        transform.localScale = localScale;
+    //    }
+    //}
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Damage" || col.gameObject.tag == "Boss")
+        {
+            if(col.gameObject.tag == "Damage")
+            {
+                Destroy(col.gameObject);
+            }
+            --health.GetComponent<Health>().playerHealth;
+        }
     }
 
 }
