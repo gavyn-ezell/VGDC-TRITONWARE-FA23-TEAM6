@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     // Start is called before the first frame update
+    public GameObject health;
     public float movementSpeed = 5;
     public Rigidbody2D player;
     private Vector2 movementDirection;
@@ -45,4 +46,15 @@ public class PlayerMovement : MonoBehaviour
     //    }
     //}
 
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Damage" || col.gameObject.tag == "Boss")
+        {
+            if(col.gameObject.tag == "Damage")
+            {
+                Destroy(col.gameObject);
+            }
+            --health.GetComponent<Health>().playerHealth;
+        }
+    }
 }
