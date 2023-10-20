@@ -10,12 +10,12 @@ public class PlayerShooting : MonoBehaviour
     public GameObject bullet;
     public Transform trans;
     //public bool test = false;
-    public float coolDown = 3f;
+    public float coolDown = 0.5f;
     private float shootTimer;
     void Start()
     {
         cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-        shootTimer = 10f;
+        shootTimer = Time.time;
     }
 
     // Update is called once per frame
@@ -29,14 +29,10 @@ public class PlayerShooting : MonoBehaviour
 
         transform.rotation = Quaternion.Euler(0, 0, aroundZ);
 
-        if (Input.GetMouseButton(0) && (shootTimer > coolDown))
+        if (Input.GetMouseButton(0) && (Time.time > shootTimer))
         {
             Instantiate(bullet, trans.position, Quaternion.identity);
-            shootTimer = 0f;
-        }
-        else
-        {
-            shootTimer += Time.deltaTime;
+            shootTimer += 0.3f;
         }
     }
 

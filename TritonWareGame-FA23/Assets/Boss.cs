@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Boss : MonoBehaviour
 {
+    public GameObject health;
     public bool shoot;
     public bool bouncing;
     public GameObject bullet;
@@ -49,6 +50,11 @@ public class Boss : MonoBehaviour
             {
                 rb.velocity = Vector2.Scale(rb.velocity, new Vector2(1f, -1f));
             }
+        }
+        if (col.gameObject.tag == "PlayerBullet")
+        {
+            Destroy(col.gameObject);
+            --health.GetComponent<BossHealth>().bossHealth;
         }
     }
 }
