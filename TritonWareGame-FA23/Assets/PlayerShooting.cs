@@ -15,9 +15,7 @@ public class PlayerShooting : MonoBehaviour
     void Start()
     {
         cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-        //shootTimer = coolDown + Time.time;
         shootTimer = 10f;
-        //coolDown = 100f;
     }
 
     // Update is called once per frame
@@ -30,17 +28,6 @@ public class PlayerShooting : MonoBehaviour
         float aroundZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
 
         transform.rotation = Quaternion.Euler(0, 0, aroundZ);
-
-        //if (test == false)
-        //{
-        //    shootTimer += Time.deltaTime;
-        //    if (shootTimer > coolDown)
-        //    {
-        //        test = true;
-        //        shootTimer = 0f;
-        //    }
-          
-        //}
 
         if (Input.GetMouseButton(0) && (shootTimer > coolDown))
         {

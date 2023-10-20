@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 7325926847337765515}
   - component: {fileID: 686516425961757663}
   - component: {fileID: 7471178308199444394}
-  - component: {fileID: 7427576026003801876}
   - component: {fileID: 8988157648279650368}
   m_Layer: 0
   m_Name: Player
@@ -163,30 +162,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41f489e9338fc4f88a88e798805082c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 5
+  movementSpeed: 7
   player: {fileID: 7325926847337765515}
-  changeDirection: {fileID: 7427576026003801876}
---- !u!95 &7427576026003801876
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6264401155301119937}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 267cfc38b32654fb6a9e60474805dbe0, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  rightFacing: 0
 --- !u!114 &8988157648279650368
 MonoBehaviour:
   m_ObjectHideFlags: 0
