@@ -15,7 +15,7 @@ public class PlayerShooting : MonoBehaviour
     void Start()
     {
         cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-        shootTimer = Time.time;
+        shootTimer = 0.3f;
     }
 
     // Update is called once per frame
@@ -32,7 +32,7 @@ public class PlayerShooting : MonoBehaviour
         if (Input.GetMouseButton(0) && (Time.time > shootTimer))
         {
             Instantiate(bullet, trans.position, Quaternion.identity);
-            shootTimer += 0.3f;
+            shootTimer = Time.time + 0.3f;
         }
     }
 

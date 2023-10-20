@@ -41,12 +41,15 @@ public class BossShooting : StateMachineBehaviour
             {
                 case 0:
                     animator.SetTrigger("Bounce");
+                    GameObject.Find("Anim").GetComponent<Animator>().SetTrigger("Bounce");
                     break;
                 case 1:
                     animator.SetTrigger("Walk");
+                    GameObject.Find("Anim").GetComponent<Animator>().SetTrigger("Walk");
                     break;
                 default:
                     animator.SetTrigger("Walk");
+                    GameObject.Find("Anim").GetComponent<Animator>().SetTrigger("Walk");
                     break;
             }
         }

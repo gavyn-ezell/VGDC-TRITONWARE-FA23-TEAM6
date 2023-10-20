@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject health;
-    public float movementSpeed = 10;
+    public float movementSpeed = 400;
     public Rigidbody2D player;
     private Vector2 movementDirection;
     public bool rightFacing;
