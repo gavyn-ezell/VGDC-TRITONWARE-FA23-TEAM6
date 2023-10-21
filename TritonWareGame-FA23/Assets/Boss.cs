@@ -22,12 +22,16 @@ public class Boss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!player)
+        {
+            return;
+        }
         rb.SetRotation(Mathf.Atan2(rb.position.y - player.transform.position.y, rb.position.x - player.transform.position.x) * Mathf.Rad2Deg + 90);
 
         if (shoot)
         {
             shoot = false;
-            for(int i = 0; i < 1; i++)
+            for (int i = 0; i < 1; i++)
             {
                 Instantiate(bullet, transform.position, Quaternion.Euler(transform.rotation.eulerAngles + new Vector3(0, 0, 90) - Vector3.forward * Random.Range(80, 100)));
             }
@@ -36,7 +40,7 @@ public class Boss : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if(bouncing)
+        if (bouncing)
         {
             if (col.name == "l" || col.name == "r")
             {

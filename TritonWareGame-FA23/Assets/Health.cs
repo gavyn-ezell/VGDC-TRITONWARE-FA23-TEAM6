@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using TMPro;
 
 public class Health : MonoBehaviour
 {
@@ -9,9 +11,14 @@ public class Health : MonoBehaviour
     public Text healthText;
     public int playerHealth;
 
+    public GameObject deathScreen;
+    public GameObject deathRaccoon;
+
     // Start is called before the first frame update
     void Start()
     {
+        deathScreen.SetActive(false);
+        deathRaccoon.SetActive(false);
         playerHealth = 5;
     }
 
@@ -27,9 +34,22 @@ public class Health : MonoBehaviour
             healthText.text = "Health: " + 0;
         }
 
-        if(playerHealth < 1)
+        if (playerHealth < 1)
         {
+            deathScreen.GetComponentInChildren<TMP_Text>().text = "YOU LOST!";
+            deathScreen.SetActive(true);
+            deathRaccoon.SetActive(true);
             Destroy(player);
         }
+    }
+
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
