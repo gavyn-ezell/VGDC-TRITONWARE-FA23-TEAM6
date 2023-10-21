@@ -25,11 +25,15 @@ public class BossWalking : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        if (!player)
+        {
+            return;
+        }
         Vector2 target = new Vector2(player.position.x, player.position.y);
         Vector2 newPosition = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
         rb.MovePosition(newPosition);
 
-        if(Time.time > time + 5 && !end)
+        if (Time.time > time + 5 && !end)
         {
             end = true;
             switch (Random.Range(0, 2))

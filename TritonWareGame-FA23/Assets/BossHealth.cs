@@ -12,6 +12,7 @@ public class BossHealth : MonoBehaviour
 
     public GameObject victoryScreen;
     public GameObject victoryRaccoon;
+    public Image bossHealthBar;
 
     // Start is called before the first frame update
     void Start()
@@ -22,14 +23,15 @@ public class BossHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (boss != null)
-        {
-            healthText.text = "Health: " + bossHealth.ToString();
-        }
-        else
-        {
-            healthText.text = "Health: " + 0;
-        }
+        bossHealthBar.fillAmount = bossHealth / 60f;
+        // if (boss != null)
+        // {
+        //     healthText.text = "Health: " + bossHealth.ToString();
+        // }
+        // else
+        // {
+        //     healthText.text = "Health: " + 0;
+        // }
 
         if (bossHealth < 1)
         {

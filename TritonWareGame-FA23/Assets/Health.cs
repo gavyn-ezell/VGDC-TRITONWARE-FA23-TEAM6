@@ -14,6 +14,8 @@ public class Health : MonoBehaviour
     public GameObject deathScreen;
     public GameObject deathRaccoon;
 
+    public Image playerHealthBar;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,14 +27,15 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player != null)
-        {
-            healthText.text = "Health: " + playerHealth.ToString();
-        }
-        else
-        {
-            healthText.text = "Health: " + 0;
-        }
+        playerHealthBar.fillAmount = playerHealth / 5f;
+        // if (player != null)
+        // {
+        //     healthText.text = "Health: " + playerHealth.ToString();
+        // }
+        // else
+        // {
+        //     healthText.text = "Health: " + 0;
+        // }
 
         if (playerHealth < 1)
         {
