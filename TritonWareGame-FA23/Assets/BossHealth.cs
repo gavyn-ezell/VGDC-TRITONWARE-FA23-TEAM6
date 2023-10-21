@@ -23,7 +23,7 @@ public class BossHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bossHealthBar.fillAmount = bossHealth / 60f;
+        bossHealthBar.fillAmount = bossHealth / 50f;
         // if (boss != null)
         // {
         //     healthText.text = "Health: " + bossHealth.ToString();

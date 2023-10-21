@@ -7,7 +7,7 @@ public class BossBouncing : StateMachineBehaviour
     Transform player;
     Rigidbody2D rb;
     Boss boss;
-    new Vector2 randomLocation;
+    Vector2 randomLocation;
 
     float time;
     bool end;
@@ -21,7 +21,8 @@ public class BossBouncing : StateMachineBehaviour
         end = false;
         rb.velocity = new Vector2(-1f, 0.2f).normalized * 10;
 
-        switch(Random.Range(0, 3)) {
+        switch (Random.Range(0, 3))
+        {
             case 0:
                 rb.velocity = Vector2.Scale(rb.velocity, new Vector2(-1f, 1f));
                 break;

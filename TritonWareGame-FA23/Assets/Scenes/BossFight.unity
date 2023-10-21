@@ -520,7 +520,7 @@ RectTransform:
   m_GameObject: {fileID: 232102445}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 124539706}
@@ -529,7 +529,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -302, y: -186}
+  m_AnchoredPosition: {x: -323, y: -193}
   m_SizeDelta: {x: 191.2156, y: 49.1216}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &232102448
@@ -1358,7 +1358,7 @@ RectTransform:
   m_GameObject: {fileID: 900835203}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 59992995}
@@ -1367,7 +1367,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8, y: 174}
+  m_AnchoredPosition: {x: 8, y: 181}
   m_SizeDelta: {x: 266.4423, y: 49.1216}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &900835205
@@ -1384,7 +1384,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boss: {fileID: 242310701}
   healthText: {fileID: 900835207}
-  bossHealth: 60
+  bossHealth: 50
   victoryScreen: {fileID: 1789168168}
   victoryRaccoon: {fileID: 716359255}
   bossHealthBar: {fileID: 1422074908}
@@ -6373,11 +6373,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8281629664860846356, guid: 2da7fe101b3014eb2a40fa2791c0beb8, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 8281629664860846356, guid: 2da7fe101b3014eb2a40fa2791c0beb8, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 8281629664860846356, guid: 2da7fe101b3014eb2a40fa2791c0beb8, type: 3}
       propertyPath: m_LocalScale.z
@@ -6726,10 +6726,10 @@ SceneRoots:
   - {fileID: 1914516800}
   - {fileID: 1350198166}
   - {fileID: 2071816193}
+  - {fileID: 1420241717}
   - {fileID: 242310707}
   - {fileID: 14004198}
   - {fileID: 8559459}
-  - {fileID: 1420241717}
   - {fileID: 1001853845}
   - {fileID: 1560239969}
   - {fileID: 2142878971}
